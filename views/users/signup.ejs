@@ -1,0 +1,90 @@
+<div id="signupform">
+  <form id="dati_signup" method="POST" action="/signup">
+    <h4>Sign Up</h4>
+    <label for="username"><b>Nome</b></label><br/>
+    <input type="text" placeholder="Nome" id="nome"><br/>
+    <label for="cognome"><b>Cognome</b></label><br/>
+    <input type="text" placeholder="Cognome" id="Cognome"><br/>
+    <label for="mail"><b>E-Mail</b></label><br/>
+    <input type="text" placeholder="mail" id="Mail"><br/>
+    <label for="username"><b>Username</b></label><br/>
+    <input type="text" placeholder="Username" id="Username"><br/>
+    <label for="username"><b>Password</b></label><br/>
+    <input type="password" placeholder="Password" id="Password"><br/>
+    <label for="telefono"><b>Numero di Telefono</b></label><br/>
+    <input type="tel" id="Telefono" placeholder="+39" pattern="+39 [0-9]{3} [0-9]{7]"><br/>
+    <p><b>Scegli il tipo di account:</b></p>
+    <input type="radio" id="studente" value="studente" name="utentetype" 
+           onclick="return hide('linkCalendar','lblCalendar')"/>
+    <label class="lblradio" for="studente">Studente</label><br/>
+    <input type="radio" id="locatore" value="locatore" name="utentetype"
+           onclick="return show('linkCalendar','lblCalendar');"/>
+    <label class="lblradio"  for="locatore">Locatore</label><br/>
+    <label for="calendar" id="lblCalendar" style="display: none;" ><b>linkCalendar</b></label><br/>
+    <input type="text" placeholder="link calendar" id="linkCalendar" name = "linkCalendar" style="display: none;"><br/>
+    <input type="submit" value="Sign Up"/>
+    <p class="bottom">Sei già registrato? <a class="link" href="./login">Login</a></p><br><br>
+  </form>
+</div>
+
+<script>
+  function show(name, lblName){
+    document.getElementById(lblName).style.display = "block";
+    document.getElementById(name).style.display = "block";
+  }
+
+  function hide(name, lblName){
+    document.getElementById(lblName).style.display = "none";
+    document.getElementById(name).style.display = "none";
+  }
+
+  const signupForm = document.getElementById('dati_signup');
+  signupForm.addEventListener('submit', signupUser);
+
+  async function signupUser(event){
+    event.preventDefault();
+    const username = document.getElementById('Username').value;
+    const password = document.getElementById('Password').value;
+    const name = document.getElementById('nome').value;
+    const surname = document.getElementById('Cognome').value;
+    const phone = document.getElementById('Telefono').value;
+    const mail = document.getElementById('Mail').value;
+    var role;
+    var calendar;
+    if(username === "") return alert("Username richiesto");
+    if(document.getElementById('studente').checked){
+      role = "studente";
+    } else if(document.getElementById('locatore').checked){
+      role = "locatore";
+      calendar = document.getElementById('linkCalendar').value;
+    } else{
+      return alert("Seleziona un ruolo");
+    }
+
+    console.log("dati letti da form \n\tname = '" + name 
+              + "'\n\tsurname = '" + surname 
+              + "'\n\tusername = '" + username 
+              + "'\n\tpassword = '" + password 
+              + "'\n\tmail = '" + mail
+              + "'\n\tphone = '" + phone
+              + "'\n\tcalendar = '" + calendar
+              + "'\n\trole = '" + role + "'");
+
+    const result = await fetch('/signup',{
+      method: 'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({
+        "username":username,
+        "nome":name,
+        "surname":surname,
+        "password":password,
+        "mail":mail,
+        "phone":phone,
+        "role":role,
+        "linkCalendar":linkCalendar
+      })
+    });
+  }
+</script>
