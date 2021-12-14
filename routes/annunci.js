@@ -3,6 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   //visualizzazione di tutti gli annunci
+  //bisogna prendere la collectin:Annunci e visualizzarli tutti
   res.render('annunci/index');
 });
 
