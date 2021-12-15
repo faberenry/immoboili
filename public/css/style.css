@@ -8,52 +8,62 @@ body {
   width: 100%;
   background-color: whitesmoke;
 }
+
 body .header {
   width: 100%;
   height: 140px;
   background-color: white;
 }
+
 body .header .logo {
   float: left;
 }
+
 body .header .title {
   float: left;
   color: #ff9900;
   font-size: 64px;
   padding: 20px;
 }
+
 body .header .list .content a {
   background-color: #ff9900;
   color: black;
   padding: 20px;
   margin: 10px;
   font-size: 20px;
-  float: left;
-}
-body .header .menu {
-  background-color: #ff9900;
   float: right;
-  width: 60px;
-  height: 60px;
-  padding: 40px;
 }
+
 body .home {
   border-top: 1px solid black;
   width: 100%;
   height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 body .home .content {
+  display: -ms-grid;
   display: grid;
 }
+
 body .home .content .container_ricerca {
-  grid-row-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
   grid-row-end: 5;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   grid-column-end: 3;
 }
+
 body .home .content .container_ricerca .ricerca {
   padding: 10px;
   font-size: 16px;
@@ -61,14 +71,18 @@ body .home .content .container_ricerca .ricerca {
   margin: 10px;
   background-color: white;
 }
+
 body .home .content .container_ricerca img {
   width: 16px;
   height: 16px;
+  -ms-grid-column: 1;
   grid-column: 1;
 }
+
 body .home .content .container_ricerca a {
   background-color: whitesmoke;
 }
+
 body .home .content a {
   background-color: #ff9900;
   color: white;
@@ -77,6 +91,7 @@ body .home .content a {
   text-align: center;
   margin: 15px;
 }
+
 body .home #loginform {
   position: absolute;
   background-color: white;
@@ -84,11 +99,13 @@ body .home #loginform {
   width: 400px;
   height: 60%;
 }
+
 body .home #loginform h4 {
   color: #ff9900;
   float: left;
   font-size: 40px;
 }
+
 body .home #loginform .close {
   float: right;
   color: white;
@@ -96,17 +113,20 @@ body .home #loginform .close {
   padding: 10px;
   font-size: 20px;
 }
+
 body .home #loginform label {
   float: left;
   color: black;
   font-style: bold;
   margin: 10px;
 }
+
 body .home #loginform .lblradio {
   color: black;
   font-style: bold;
   margin: 0px;
 }
+
 body .home #loginform input[type=text], body .home #loginform input[type=password] {
   float: left;
   padding: 15px;
@@ -114,9 +134,11 @@ body .home #loginform input[type=text], body .home #loginform input[type=passwor
   margin-left: 10%;
   margin-right: 10%;
 }
+
 body .home #loginform input[type=radio] {
   float: left;
 }
+
 body .home #loginform input[type=submit] {
   float: left;
   background-color: #ff9900;
@@ -128,14 +150,17 @@ body .home #loginform input[type=submit] {
   margin-left: 10%;
   margin-right: 10%;
 }
+
 body .home #loginform .bottom {
   bottom: 0px;
   position: absolute;
   padding: 15px;
 }
+
 body .home #loginform .bottom a {
   color: #ff9900;
 }
+
 body .home #signupform {
   overflow: hidden;
   position: absolute;
@@ -144,11 +169,13 @@ body .home #signupform {
   width: 600px;
   height: 120%;
 }
+
 body .home #signupform h4 {
   color: #ff9900;
   float: left;
   font-size: 40px;
 }
+
 body .home #signupform .close {
   float: right;
   color: white;
@@ -156,18 +183,21 @@ body .home #signupform .close {
   padding: 10px;
   font-size: 20px;
 }
+
 body .home #signupform label {
   float: left;
   color: black;
   font-style: bold;
   margin: 10px;
 }
+
 body .home #signupform .lblradio {
   float: left;
   color: black;
   font-style: bold;
   margin: 0px;
 }
+
 body .home #signupform input[type=text], body .home #signupform input[type=password], body .home #signupform input[type=tel] {
   float: left;
   padding: 15px;
@@ -175,11 +205,13 @@ body .home #signupform input[type=text], body .home #signupform input[type=passw
   margin-left: 10%;
   margin-right: 10%;
 }
+
 body .home #signupform input[type=radio] {
   float: left;
   width: 10%;
   margin: 10px;
 }
+
 body .home #signupform input[type=submit] {
   float: left;
   background-color: #ff9900;
@@ -191,18 +223,49 @@ body .home #signupform input[type=submit] {
   margin-left: 10%;
   margin-right: 10%;
 }
+
 body .home #signupform p {
   float: left;
   margin: 10px;
 }
+
 body .home #signupform .bottom {
   bottom: 0px;
   position: absolute;
   padding: 15px;
 }
+
 body .home #signupform .bottom a {
   color: #ff9900;
 }
+
+body .main {
+  width: 100%;
+  height: 400px;
+  background-image: url("/images/sfondoBGSfocato.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+}
+
+body .main .research {
+  border-radius: 30px;
+  background: white;
+  padding: 10px;
+  width: 200px;
+  height: 15px;
+}
+
 body .footer {
   position: fixed;
   background-color: #ff9900;
@@ -213,5 +276,4 @@ body .footer {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 /*# sourceMappingURL=style.css.map */
