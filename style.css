@@ -1,26 +1,24 @@
 *{
     margin: 0px;
-    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-body 
-{
+body {
     background-image:    url("sfondoBGSfocato.jpeg");
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
 }
 
-#header
-{
+#header{
     width: 100%; /* si adatta in larghezza alle risoluzioni di tutti i browser */
     height: 50px;
     border:0px whitesmoke;
 }
 
 
-#butType1
-{
+#butType1{
     text-align: right; 
     border:0px; 
     color:orange; 
@@ -28,8 +26,7 @@ body
     vertical-align: middle; 
 }
 
-#butType2
-{
+#butType2{
     text-align: right; 
     border:0px; 
     background-color:transparent;
@@ -37,28 +34,24 @@ body
 }
 
 
-#main
-{
+#main{
     height: 500px;
     margin: 0;
     padding: 30px;
 }
 
-#footer
-{
+#footer{
+    width: 100%;
     height: 30px;
     background-color: gray;
-    padding: 0;
+    padding: 20px;
     border:1px solid black;
-}
-
-.main-footer{     
-    position: sticky; 
+    text-align: center;
     bottom: 0;
+    position: absolute;
 }
 
-div.center-text 
-{
+div.center-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,5 +63,22 @@ div.center-text
     background: rgb(255, 255, 255);
     padding: 10px; 
     width: 200px;
-    height: 15px;    
+    height: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.btn {
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: #f4f4f4;
 }
