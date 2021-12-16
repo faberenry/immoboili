@@ -4,46 +4,73 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image:    url("sfondoBGSfocato.jpeg");
-    background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
+body 
+{
+    height: 100vh;
+    width: 100%;
+    font-family: Helvetica;
 }
 
-#header{
+ul
+{
+    list-style: none;
+}
+
+li
+{
+    font-weight: 600;
+}
+
+#header
+{
     width: 100%; /* si adatta in larghezza alle risoluzioni di tutti i browser */
     height: 50px;
     border:0px whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: whitesmoke;
 }
 
-
-#butType1{
+#butType1
+{
     text-align: right; 
     border:0px; 
     color:orange; 
     background-color:transparent;
-    vertical-align: middle; 
+    vertical-align: middle;
+    text-decoration: none;
 }
 
-#butType2{
+#butType2
+{
+    color: black;
     text-align: right; 
     border:0px; 
     background-color:transparent;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 
-#main{
+#main
+{
+    background-image:    url("./public/images/sfondoBGSfocato.jpeg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+
     height: 500px;
     margin: 0;
     padding: 30px;
 }
 
-#footer{
+#footer
+{
     width: 100%;
     height: 30px;
-    background-color: gray;
+    background-color: orange;
     padding: 20px;
     border:1px solid black;
     text-align: center;
@@ -51,27 +78,25 @@ body {
     position: absolute;
 }
 
-div.center-text {
+div.center-text 
+{
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
+    height: 300px;
 }
 
-#research {
-    border-radius: 30px;
-    background: rgb(255, 255, 255);
-    padding: 10px; 
-    width: 200px;
-    height: 15px;
-}
-
-a{
+a
+{
     text-decoration: none;
+    margin: 0 5px;
+    color: black;
 }
 
 
-.btn {
+.btn 
+{
     color: black;
     border: none;
     font-size: 16px;
@@ -79,92 +104,172 @@ a{
     border-radius: 10px;
 }
 
-.btn:hover {
+.btn:hover 
+{
     background: #f4f4f4;
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+.flex-center
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Utility Classes */
+
+.container{
+    max-width: 1200px;
+    padding: 0 20px;
+    overflow: auto;
+    margin: auto;
 }
 
 
-body {
-    background-image:    url("sfondoBGSfocato.jpeg");
-    background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
-}
-
-#header{
-    width: 100%; /* si adatta in larghezza alle risoluzioni di tutti i browser */
-    height: 50px;
-    border:0px whitesmoke;
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-#butType1{
-    text-align: right; 
-    border:0px; 
-    color:orange; 
-    background-color:transparent;
-    vertical-align: middle; 
+/*Main*/
+
+/* Searchbar and Filters */
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-#butType2{
-    text-align: right; 
-    border:0px; 
-    background-color:transparent;
-    vertical-align: middle;
+main .container > div{
+    padding: 10px;
 }
 
-
-#main{
-    height: 500px;
-    margin: 0;
-    padding: 30px;
+.search form > *{
+    margin: 20px 0;
 }
 
-#footer{
+/* Search field */
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgba(0,0,0,0.3);
+    border-radius: 30px;
+    padding: 5px 2px;
+    width: 450px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    margin: 200px auto;
+}
+
+.search-bar #search-field{
+    border: none;
+    background: none;
+    padding: 8px 0;
+}
+
+.search-bar #search-field:focus{
+    outline: none;
+}
+
+.search-bar #search-button{
+    background: none;
+    border: none;
+    color: rgba(0,0,0,0.8);
+}
+
+.fas{
+    color: rgba(0,0,0,0.6);
+}
+
+/* Filters */
+.filters
+{
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+.filters > *
+{
+    padding: 10px 5px;
+}
+
+.filters > div > input
+{
     width: 100%;
-    height: 30px;
-    background-color: gray;
-    padding: 20px;
-    border:1px solid black;
-    text-align: center;
-    bottom: 0;
-    position: absolute;
+    padding: 5px 5px;
 }
 
-div.center-text {
+.filters label
+{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Showcase cards */
+.showcase-card
+{
+    margin: 20px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    color: black;
+    height: 150px;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 15px
 }
 
-#research {
-    border-radius: 30px;
-    background: rgb(255, 255, 255);
-    padding: 10px; 
+.showcase-card img
+{
     width: 200px;
-    height: 15px;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
-a{
-    text-decoration: none;
-}
 
-
-.btn {
-    color: black;
-    border: none;
-    font-size: 16px;
+.showcase-card .card-description
+{
     padding: 10px 20px;
-    border-radius: 10px;
+
 }
 
-.btn:hover {
-    background: #f4f4f4;
+.showcase-card .card-description p
+{
+    margin: 20px 0;
+
+}
+
+/* Roba per la chat */
+#chat
+{
+    max-width: 600px;
+    margin: 30px auto;
+    border: none;
+    border-radius: 30px;
+    opacity: 0.85;
+    background: none;
+}
+
+#chat-window
+{
+    height: 400px;
+    overflow: auto;
+    background-color: white;
+    opacity: 0.35;
+    filter: drop-shadow(0 0 0.75rem rgb(203, 247, 247));
+    /* filter: blur(4px); */
+    border-radius: 30px;
+}
+
+/* gestione output chat */
+#output p
+{
+    padding: 14px 0px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+    border-radius: 30px;
 }
