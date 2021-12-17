@@ -33,17 +33,27 @@ li
     background: whitesmoke;
 }
 
-#butType1
+#butTypeA1
 {
     text-align: right; 
     border:0px; 
     color:orange; 
-    background-color:transparent;
     vertical-align: middle;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
-#butType2
+#butTypeA1:hover 
+{ 
+    font-family: Verdana;
+    font-size: 16px;
+    color: #000000;
+    border: transparent;
+    background-color: rgb(255, 208, 121);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#butTypeB1
 {
     color: black;
     text-align: right; 
@@ -53,6 +63,58 @@ li
     text-decoration: none;
 }
 
+#butTypeB1:hover 
+{ 
+    font-family: Verdana;
+    font-size: 16px;
+    color: #000000;
+    border: transparent;
+    background-color: rgb(255, 208, 121);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#butTypeB2
+{
+    color: black;
+    text-align: right; 
+    border:0px; 
+    background-color:transparent;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+#butTypeB2:hover 
+{ 
+    font-family: Verdana;
+    font-size: 16px;
+    color: #000000;
+    border: transparent;
+    background-color: rgb(255, 208, 121);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#butTypeB3
+{
+    color: black;
+    text-align: right; 
+    border:0px; 
+    background-color:transparent;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+#butTypeB3:hover 
+{ 
+    font-family: Verdana;
+    font-size: 16px;
+    color: #000000;
+    border: transparent;
+    background-color: rgb(255, 208, 121);
+    border-radius: 25px;
+    padding: 10px;
+}
 
 #main
 {
@@ -161,12 +223,13 @@ main .container > div{
     width: 450px;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
     margin: 200px auto;
+    background-color: white;
 }
 
 .search-bar #search-field{
     border: none;
-    background: none;
     padding: 8px 0;
+    background-color: white;
 }
 
 .search-bar #search-field:focus{
@@ -174,9 +237,9 @@ main .container > div{
 }
 
 .search-bar #search-button{
-    background: none;
     border: none;
     color: rgba(0,0,0,0.8);
+    background-color: white;
 }
 
 .fas{
