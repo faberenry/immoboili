@@ -40,6 +40,7 @@ li
     color:orange; 
     vertical-align: middle;
     text-decoration: none; 
+    transition-duration: 300ms;
 }
 
 #butTypeA1:hover 
@@ -51,6 +52,7 @@ li
     background-color: rgb(255, 208, 121);
     border-radius: 25px;
     padding: 10px;
+    transition-duration: 300ms;
 }
 
 #butTypeB1
@@ -61,6 +63,7 @@ li
     background-color:transparent;
     vertical-align: middle;
     text-decoration: none;
+    transition-duration: 300ms;
 }
 
 #butTypeB1:hover 
@@ -72,6 +75,7 @@ li
     background-color: rgb(255, 208, 121);
     border-radius: 25px;
     padding: 10px;
+    transition-duration: 300ms;
 }
 
 #butTypeB2
@@ -82,6 +86,7 @@ li
     background-color:transparent;
     vertical-align: middle;
     text-decoration: none;
+    transition-duration: 300ms;
 }
 
 #butTypeB2:hover 
@@ -93,6 +98,7 @@ li
     background-color: rgb(255, 208, 121);
     border-radius: 25px;
     padding: 10px;
+    transition-duration: 300ms;
 }
 
 #butTypeB3
@@ -103,6 +109,7 @@ li
     background-color:transparent;
     vertical-align: middle;
     text-decoration: none;
+    transition-duration: 300ms;
 }
 
 #butTypeB3:hover 
@@ -114,6 +121,7 @@ li
     background-color: rgb(255, 208, 121);
     border-radius: 25px;
     padding: 10px;
+    transition-duration: 300ms;
 }
 
 #main
